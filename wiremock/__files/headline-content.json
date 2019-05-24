@@ -1,0 +1,5 @@
+{
+  "locale": "en_US",
+  "title": "Title from REST Endpoint",
+  "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis sagittis justo. Ut arcu ante, semper eget pulvinar ut, eleifend sed nisl. Proin ornare nibh id tincidunt pretium. Sed id erat eget est mollis convallis. Suspendisse ultrices neque consequat nisl faucibus convallis non sed felis. In nunc justo, scelerisque et justo eu, euismod imperdiet quam. Etiam sodales sodales laoreet. Aenean in diam quis ante dignissim pellentesque at at libero. Vivamus elementum erat in elit aliquam blandit. Sed metus lacus, egestas a nunc tincidunt, porttitor facilisis erat. Ut dictum risus sit amet orci lobortis tincidunt. Nullam sed cursus mi.</p>"
+}

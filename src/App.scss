@@ -1,0 +1,31 @@
+$drawer-width: 240px;
+$breakpoint-md: 960px;
+$theme-spacing-unit: 8px;
+
+.root { display: flex; }
+
+.toolbar { min-height: 56px; }
+.app-bar { margin-left: $drawer-width; }
+.menu-button { margin-right: 20px; }
+/* TODO Need to get rid of the !important */
+.menu-label { padding-left: 0px !important; }
+.drawer-paper { width: $drawer-width; }
+.content { flex-grow: 1; padding: $theme-spacing-unit * 3; }
+
+/*
+That theme.breakpoints.up('sm') media query is used for various generated styles:
+.MuiToolbar-regular-39, .MuiToolbar-gutters-38
+NOTE: The order of the media queries is crucial!
+TODO need to tie this to the theme's breakpoints: https://material-ui.com/layout/breakpoints/
+*/
+@media (min-width:0px) and (orientation: landscape) {
+  .toolbar { min-height: 48px; }
+};
+@media ( min-width: $breakpoint-md ) {
+  .toolbar { min-height: 64px; }
+  /* MuiAppBar-positionFixed-2 interferes with 'left: auto;' */
+  .app-bar { left: 0px !important; width: calc(100% - $drawer-width); }
+  /* .MuiButtonBase-root-47 interferes with 'display: inline-flex;' */
+  .menu-button { display: none !important; }
+  .drawer { width: $drawer-width; flex-shrink: 0; }
+};

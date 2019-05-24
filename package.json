@@ -1,0 +1,49 @@
+{
+  "name": "elim-react-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "@types/node": "11.13.4",
+    "@types/react": "16.8.13",
+    "@types/react-dom": "16.8.4",
+    "axios": "^0.18.0",
+    "inversify": "^5.0.1",
+    "inversify-inject-decorators": "^3.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --verbose=false",
+    "eject": "react-scripts eject",
+    "wiremock": "cd wiremock && java -jar wiremock-standalone-2.23.2.jar --port 3001"
+  },
+  "proxy": "http://localhost:3001",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "24.0.11",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest-enzyme": "^7.0.2",
+    "jest-mock-axios": "^2.4.0",
+    "node-sass": "^4.11.0",
+    "react-scripts": "2.1.8",
+    "react-test-renderer": "^16.8.6",
+    "reflect-metadata": "^0.1.13",
+    "ts-jest": "^24.0.2"
+  }
+}
