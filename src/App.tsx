@@ -3,8 +3,7 @@ import React, { Component, Fragment } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.scss';
 
-import axios from 'axios';
-import { container, lazyInject } from "./ioc";
+import { Inject, Module } from 'react.di';
 import { ContentService } from './services/ContentService';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -46,10 +45,10 @@ export class HeaderContent {
 /**
  * This version adapted from https://material-ui.com/demos/drawers/#responsive-drawer
  */
+@Module({ providers: [ContentService] })
 class App extends Component<any, State> {
 
-  // @lazyInject("contentService") is broken with React: https://github.com/inversify/InversifyJS/issues/1026
-  private readonly contentService: ContentService = container.get("contentService");
+  @Inject contentService!: ContentService;
 
   constructor(props: any){
       super(props);

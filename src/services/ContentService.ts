@@ -1,11 +1,11 @@
-import { injectable } from "inversify";
+import { Injectable } from 'react.di';
 import axios from 'axios';
 
 export class HeaderContent {
   constructor(public locale: string, public title: string, public content: string) {}
 }
 
-@injectable()
+@Injectable
 export class ContentService {
 
   public loadHeader(): Promise<any> {
